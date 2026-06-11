@@ -9,7 +9,7 @@ on:
     # ║                                                                ║
     # ║  Examples:                                                     ║
     # ║    '0 9 * * *'   = 9:00 AM UTC daily                          ║
-    # ║    '30 14 * * *' = 2:30 PM UTC daily                          ║
+    # ║    '20 15 * * *' = 2:30 PM UTC daily                          ║
     # ║    '0 0 * * *'   = Midnight UTC daily                         ║
     # ║                                                                ║
     # ║  Use https://time.is/UTC to find your local time in UTC       ║
@@ -41,6 +41,8 @@ jobs:
         env:
           # Your secrets are available as environment variables
           # Add more secrets in Settings > Secrets > Actions
-          MY_EMAIL: ${{ secrets.MY_EMAIL }}
-          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          TEL: ${{ secrets.TEL }}
         run: python main.py
