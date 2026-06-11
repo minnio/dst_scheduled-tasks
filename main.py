@@ -31,6 +31,6 @@ if True in is_rain:
     message = client.messages.create(
         body="It is going to rain",
         from_="+1 276 246 2938",
-        to="tel",
+        to=tel,
     )
     print(message.status)
